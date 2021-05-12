@@ -58,7 +58,7 @@ div.nav {
 }
 
 div.nav img.logo {
-  width: 9em;
+  width: 15em;
 }
 
 div.language-login {
@@ -142,17 +142,15 @@ section article {
 
 section article div.text {
   padding: var(--margin-side);
+  width: 50%;
 }
 
 section article div.text h1 {
-  font-size: 5.4rem;
+  font-size: 4.5rem;
 }
 
 section article div.text p {
   font-size: 2rem;
+  font-weight: 500;
   margin-top: var(--margin-up);
-}
-
-section article img {
-  /* width: 50%; */
 }
