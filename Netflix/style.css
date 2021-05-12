@@ -135,11 +135,14 @@ div.input-start button {
   color: var(--text-white);
 }
 
+/* 회색 언더바 */
 .under-bar {
   width: 100%;
   height: 1rem;
   background-color: var(--border-gray);
 }
+
+/* 하단 아티클  */
 
 section article {
   width: 100%;
@@ -149,7 +152,9 @@ section article {
   padding: calc(var(--margin-up) * 3) calc(var(--margin-side) * 2);
 }
 
+/* 아티클 텍스트 영역 */
 section article div.text {
+  flex: 1;
   padding: var(--margin-side);
   width: 50%;
 }
@@ -162,4 +167,28 @@ section article div.text p {
   font-size: 2rem;
   font-weight: 500;
   margin-top: var(--margin-up);
+}
+
+/* 아티클 비디오 영역 */
+section article div.video {
+  flex: 1;
+}
+
+section article div.video img {
+  width: 50rem;
+}
+
+section article div.video video.tv {
+  position: relative;
+  width: 360px;
+  top: -300px;
+  left: 65px;
+}
+
+section article div.video video.device {
+  position: relative;
+  width: 290px;
+  top: -330px;
+  left: 100px;
+  z-index: -1;
 }
