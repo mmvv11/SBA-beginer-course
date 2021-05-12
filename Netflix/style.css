@@ -1,0 +1,158 @@
+:root {
+  --logo-red: #dc0611;
+  --text-white: #ffffff;
+  --border-gray: #222222;
+  --background-black: #000000;
+  --padding: 8px;
+  --margin-side: 75px;
+  --margin-up: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: var(--background-black);
+  color: var(--text-white);
+}
+
+.jumbotron {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  text-align: center;
+}
+
+.jumbotron::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.8) 0,
+        rgba(0, 0, 0, 0) 60%,
+        rgba(0, 0, 0, 0.8) 100%
+      )
+      no-repeat center center/cover,
+    url(./image/banner.jpg) no-repeat center center/cover;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+div.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 2em 5em 0;
+}
+
+div.nav img.logo {
+  width: 9em;
+}
+
+div.language-login {
+  display: flex;
+}
+
+div.language-login button {
+  padding: var(--padding) calc(var(--padding) * 2);
+  margin: var(--padding);
+  color: var(--text-white);
+}
+
+button.language {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid var(--text-white);
+}
+
+button.login {
+  border: 0;
+  background-color: var(--logo-red);
+  border-radius: 5%;
+}
+
+div.jumbotron div.content {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+}
+
+div.jumbotron div.content h1 {
+  font-size: 6rem;
+  margin: 0 var(--margin-side);
+}
+
+div.jumbotron div.content h2 {
+  font-size: 3rem;
+  margin: var(--margin-up) var(--margin-side);
+}
+
+div.jumbotron div.content p {
+  font-size: 2rem;
+  margin: calc(var(--margin-up) * 2) 0 var(--margin-up) 0;
+}
+
+div.input-start {
+  display: flex;
+  justify-content: center;
+  height: 6rem;
+}
+
+div.input-start input {
+  width: 45rem;
+  padding: var(--padding);
+  line-height: 1.1;
+  border: none;
+}
+div.input-start button {
+  width: 14rem;
+  line-height: 1.1;
+  background-color: var(--logo-red);
+  border: none;
+  font-size: 2rem;
+  color: var(--text-white);
+}
+
+.under-bar {
+  width: 100%;
+  height: 1rem;
+  background-color: var(--border-gray);
+}
+
+section article {
+  width: 100%;
+  height: 50rem;
+  display: flex;
+  justify-content: space-between;
+  padding: calc(var(--margin-up) * 3) calc(var(--margin-side) * 2);
+}
+
+section article div.text {
+  padding: var(--margin-side);
+}
+
+section article div.text h1 {
+  font-size: 5.4rem;
+}
+
+section article div.text p {
+  font-size: 2rem;
+  margin-top: var(--margin-up);
+}
+
+section article img {
+  /* width: 50%; */
+}

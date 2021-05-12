@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="first-con">
+      1
+      <div id="sec-con">
+        2
+        <div id="hh">hh</div>
+      </div>
+    </div>
+    <div id="third-con">
+      3
+      <div id="forth-con">4</div>
+    </div>
+    <script>
+      first = document.getElementById("first-con");
+      sec = document.getElementById("sec-con");
+      third = document.getElementById("third-con");
+      forth = document.getElementById("forth-con");
+      hh = document.getElementById("hh");
+
+      first.addEventListener("click", (e) => {
+        console.log(event.target);
+      });
+      /*sec.addEventListener("click", (e) => {
+        console.log(event.target);
+      });
+      third.addEventListener("click", (e) => {
+        console.log(3);
+        e.stopPropagation();
+      });
+      forth.addEventListener("click", (e) => {
+        console.log(4);
+        e.stopPropagation();
+      });
+      hh.addEventListener("click", (e) => {
+        console.log("hh");
+      });*/
+    </script>
+  </body>
+</html>

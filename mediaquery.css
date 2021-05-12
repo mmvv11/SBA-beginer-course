@@ -1,0 +1,28 @@
+:root {
+  --padding: 8px;
+  --font-size: 24px;
+  --margin: 12px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-size: var(--font-size);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--padding);
+  align-items: center;
+  background-color: #f9f9f9;
+}
+
+.menu-list {
+  list-style: none;
+  display: flex;
+}
+
+.menu-item {
+  padding: var(--padding);
+}
