@@ -1,3 +1,5 @@
+/* 기본설정 */
+
 :root {
   --logo-red: #dc0611;
   --text-white: #ffffff;
@@ -23,6 +25,8 @@ body {
   color: var(--text-white);
 }
 
+/* 전광판 꾸미기 */
+
 .jumbotron {
   width: 100%;
   height: 100vh;
@@ -30,6 +34,7 @@ body {
   text-align: center;
 }
 
+/* 멀티 백그라운드 */
 .jumbotron::after {
   content: "";
   position: absolute;
@@ -48,6 +53,8 @@ body {
   opacity: 0.7;
   z-index: -1;
 }
+
+/* 전광판 상단 메뉴 */
 
 div.nav {
   display: flex;
@@ -81,6 +88,8 @@ button.login {
   background-color: var(--logo-red);
   border-radius: 5%;
 }
+
+/* 전광판 메인 컨텐츠 */
 
 div.jumbotron div.content {
   position: absolute;
