@@ -196,7 +196,7 @@ section article div.container video.tv {
 }
 
 .video-container.device {
-  max-width: 70%;
+  max-width: 100%;
   max-height: 100%;
   position: absolute;
   top: 14%;
@@ -205,7 +205,7 @@ section article div.container video.tv {
 }
 
 section article div.container video.device {
-  width: 90%;
+  width: 78%;
 }
 
 /* 반응형 조절 */
