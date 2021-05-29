@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 20px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+div.logo-name {
+  display: flex;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+@media screen and (max-width: 350px) {
+  body {
+    font-size: 10px;
+  }
+}

@@ -178,8 +178,8 @@ section article div.container {
 }
 
 section article div.container img {
-  max-width: 100%;
-  max-height: 100%;
+  /* max-width: 100%; */
+  /* max-height: 100%; */
 }
 
 .video-container.tv {
