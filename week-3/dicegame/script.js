@@ -1,6 +1,6 @@
-var button = document.querySelectorAll("button")[0];
+var button = document.getElementsByTagName("button")[0];
 
-var num = 0;
+var turn = 0;
 var play1Number, play2Number;
 var reset = false;
 
@@ -9,15 +9,15 @@ function rolling() {
     location.reload();
   }
 
-  if (num > 1) {
-    num = 0;
+  if (turn > 1) {
+    turn = 0;
   }
   var randomNumber = Math.floor(Math.random() * 6) + 1; //1-6
   var randomImage = "images/" + randomNumber + ".png";
-  var image = document.querySelectorAll("img")[num];
+  var image = document.querySelectorAll("img")[turn];
   image.setAttribute("src", randomImage);
 
-  if (num === 0) {
+  if (turn === 0) {
     button.innerText = "플레이어-2 굴리기";
     play1Number = randomNumber;
   } else {

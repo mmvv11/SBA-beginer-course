@@ -52,6 +52,12 @@ function rederingTodoList(todoData) {
   });
 }
 
+// 로컬스토리지 업데이트하기
+function updateLocalStrageTodoData(todoData) {
+  var updatedTodoData = JSON.stringify(todoData);
+  localStorage.setItem("todoList", updatedTodoData);
+}
+
 // create
 function createTodo(todoText) {
   var todoId = Date.now();
@@ -63,8 +69,7 @@ function createTodo(todoText) {
 
   // localStorage 업데이트
   todoData.push(todoObject);
-  updatedTodoData = JSON.stringify(todoData);
-  localStorage.setItem("todoList", updatedTodoData);
+  updateLocalStrageTodoData(todoData);
 
   // DOM에 추가하는 함수 호출
   addTodoToDOM(todoObject);
@@ -101,8 +106,7 @@ function checkFromLocalStorage(target) {
   todoData.forEach((todo) => {
     if (todo.todoId == todoId) {
       todo.checkDone = target.checked;
-      updatedTodoData = JSON.stringify(todoData);
-      localStorage.setItem("todoList", updatedTodoData);
+      updateLocalStrageTodoData(todoData);
     }
   });
 }
@@ -137,8 +141,7 @@ function updateFromLocalStorage(target, updatedTodoText) {
   todoData.forEach((todo) => {
     if (todo.todoId == todoId) {
       todo.todoText = updatedTodoText;
-      updatedTodoData = JSON.stringify(todoData);
-      localStorage.setItem("todoList", updatedTodoData);
+      updateLocalStrageTodoData(todoData);
     }
   });
 }
@@ -171,17 +174,26 @@ function deleteFromLocalStorage(todoId) {
   todoData.forEach((todo) => {
     if (todo.todoId == todoId) {
       var index = todoData.indexOf(todo);
-      console.log(index);
       todoData.splice(index, 1);
-      console.log(todoData);
-      updatedTodoData = JSON.stringify(todoData);
-      localStorage.setItem("todoList", updatedTodoData);
+      updateLocalStrageTodoData(todoData);
     }
   });
 }
 
 // read
 function addTodoToDOM(todoObject) {
+  //   <li class="todo-item" id="??">
+  //   <span class="done-text">
+  //     <input type="checkbox" class="check-done" />
+  //     <p class="todo-text">ㄱㄱ</p>
+  //   </span>
+
+  //   <span class="update-delete">
+  //     <i class="update-todo fas fa-edit"></i>
+  //     <i class="delete-todo fas fa-trash-alt"></i>
+  //   </span>
+  // </li>
+
   // 최상위 li 태그
   var li = document.createElement("li");
   li.setAttribute("id", todoObject.todoId);
